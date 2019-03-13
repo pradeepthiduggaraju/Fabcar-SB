@@ -44,7 +44,8 @@ Follow these steps to set up and run this code pattern. The steps are described 
 
 - [IBM Cloud account](https://cloud.ibm.com/registration/?target=%2Fdashboard%2Fapps)
 - [Node v8.x or greater and npm v5.x or greater](https://nodejs.org/en/download/)
-
+- python2.7(https://www.python.org/downloads/release/python-2716/)
+- openSSL configuration (
 
 ### Steps
 
