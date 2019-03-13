@@ -44,15 +44,13 @@ Follow these steps to set up and run this code pattern. The steps are described 
 
 - [IBM Cloud account](https://cloud.ibm.com/registration/?target=%2Fdashboard%2Fapps)
 - [Node v8.x or greater and npm v5.x or greater](https://nodejs.org/en/download/)
-- [VSCode version 1.26 or greater](https://code.visualstudio.com)
-- [IBM Blockchain Platform Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform)
+
 
 ### Steps
 
 
 
 1. [Clone the repo](#1-clone-the-repo)
-2. [Connect application to the network](#6-connect-application-to-the-network)
 3. [Run the application](#7-run-the-application)
 
 
@@ -67,7 +65,7 @@ cd fabcar-blockchain-sample
 
 
 
-## 7. Run the application
+## 2. Run the application
 
 * #### Enroll admin
   - First, navigate to the `web-app` directory, and install the node dependencies.
