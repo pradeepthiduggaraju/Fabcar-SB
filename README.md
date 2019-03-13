@@ -6,8 +6,6 @@ This code pattern demonstrates setting up a network on the IBM Blockchain Platfo
 
  When the reader has completed this code pattern, they will understand how to:
 
-* Setup a Hyperledger Fabric network on IBM Blockchain Platform 2.0
-* Install and instantiate smart contract through the IBM Blockchain Platform 2.0
 * Develop a Node.js server with the Hyperledger Fabric SDK to interact with the deployed network
 * Create a Vue.js frontend for the web app to interface with the network
 
