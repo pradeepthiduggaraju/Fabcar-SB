@@ -2,12 +2,23 @@
 
 >Hyperledger Fabric sample Fabcar on IBM Blockchain Platform 2.0
 
-This code pattern demonstrates setting up a network on the IBM Blockchain Platform 2.0 and deploying the Fabcar smart contract on the network.  Next, we setup our application to interact with the network including identities to submit transactions on the smart contract.  The application is setup with a Node.js server using the Fabric Node SDK to process requests to the network, and a Vue.js client to bring up a web interface.
+Blockchain is a shared, immutable ledger for recording the history of transactions. The Linux Foundation’s Hyperledger Fabric, the software implementation of blockchain IBM is committed to, is a permissioned network. Hyperledger Fabric is a platform for distributed ledger solutions underpinned by a modular architecture delivering high degrees of confidentiality, resiliency, flexibility and scalability.
 
+In a Blockchain solution, the Blockchain network works as a back-end with an application front-end to communicate with the network using a SDK. To set up the communication between front-end and back-end, Hyperledger Fabric community offers a number of SDKs for a wide variety of programming languages. In this tutorial, we will talk about Fabric Node SDK. 
+
+This code pattern we setup our application to interact with the network including identities to submit transactions on the smart contract.  The application is setup with a Node.js server using the Fabric Node SDK to process requests to the network, and a Vue.js client to bring up a web interface.
+
+ 
+ ## Learning objectives
  When the reader has completed this code pattern, they will understand how to:
 
 * Develop a Node.js server with the Hyperledger Fabric SDK to interact with the deployed network
 * Create a Vue.js frontend for the web app to interface with the network
+
+## Estimated time
+
+Completing this tutorial should take about 30 minutes.
+
 
 
 # Architecture flow
@@ -52,7 +63,7 @@ Follow these steps to set up and run this code pattern. The steps are described 
 
 
 1. [Clone the repo](#1-clone-the-repo)
-3. [Run the application](#7-run-the-application)
+3. [Run the application](#2-run-the-application)
 
 
 ## 1. Clone the repo
@@ -69,11 +80,15 @@ cd fabcar-blockchain-sample
 ## 2. Run the application
 
 * #### Enroll admin
+
+When the Hyperledger Fabric network was launched an admin user was registered with Certificate Authority. Now we need to send an enroll call to the CA server and retrieve the enrollment certificate (eCert) for admin. The client application needs this cert in order to form a user object for the admin. We will then use this admin object to subsequently register and enroll a new user.
+
   - First, navigate to the `web-app` directory, and install the node dependencies.
     ```bash
     cd web-app/server
     npm install
     ```
+When your network was created in the Starter Plan, each organization had an Administrator user called admin automatically registered with the Certificate Authority (CA). You now need to send an enrolment request to the CA to retrieve that user’s enrollment certificate (eCert).
 
   - Run the `enrollAdmin.js` script
     ```bash
@@ -86,6 +101,8 @@ cd fabcar-blockchain-sample
     ```
 
 * #### Register User
+To perform various operations on the network, we should not use admin user since the admin has all the privileges. New users need to be registered and enrolled for performing various operations. 
+
   - Run the `registerUser.js` script.
     ```bash
     node registerUser.js
@@ -99,6 +116,7 @@ cd fabcar-blockchain-sample
 
 
 * #### Start the application server
+
   - From the `server` directory, start the server.
 
     ```bash
@@ -117,7 +135,7 @@ cd fabcar-blockchain-sample
     npm run serve
     ```
 
-You can find the app running at http://localhost:8080/
+You can find the app running at http://localhost:8082/
 
 <br>
 <p align="center">
